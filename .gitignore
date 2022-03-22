@@ -12,3 +12,7 @@ obj
 Packages
 ProjectSettings
 UserSettings
+Temp
+Assets/Plugins
+Assets/Shatalmic
+*.csproj
