@@ -1,0 +1,14 @@
+
+*.meta
+*.ttf
+*.txt
+*.mat
+*.asset
+Assets/TextMesh Pro
+Exports
+Library
+Logs
+obj
+Packages
+ProjectSettings
+UserSettings
