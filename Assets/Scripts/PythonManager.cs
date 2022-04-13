@@ -57,7 +57,7 @@ public class PythonManager : MonoBehaviour
         if (!Input.location.isEnabledByUser)
         {
             Debug.Log("OOF");
-            yield break;
+            //yield break;
         }
 
         // Starts the location service.
@@ -75,14 +75,14 @@ public class PythonManager : MonoBehaviour
         if (maxWait < 1)
         {
             Debug.Log("Timed out");
-            yield break;
+            //yield break;
         }
 
         // If the connection failed this cancels location service use.
         if (Input.location.status == LocationServiceStatus.Failed || !Input.location.isEnabledByUser)
         {
             Debug.Log("Unable to determine device location");
-            yield break;
+            //yield break;
         }
         else
         {
@@ -91,8 +91,8 @@ public class PythonManager : MonoBehaviour
             // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
             Debug.Log("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
         }
-        //Latitude = 48.780931f;
-        //Longitude = 2.260204f;
+        Latitude = 48.780931f;
+        Longitude = 2.260204f;
         string url = "http://dev.virtualearth.net/REST/V1/Routes/Walking?wp.0=" + Latitude.ToString() + "," + Longitude.ToString() + "&wp.1=" + Adresse + "%E2%80%8B&key=" + bingMapsKey;
         int index = url.IndexOf(" ");
         while (index != -1)

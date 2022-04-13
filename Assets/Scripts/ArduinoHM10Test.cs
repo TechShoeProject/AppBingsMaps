@@ -1,9 +1,4 @@
-﻿/* This is an example to show how to connect to 2 HM-10 devices
- * that are connected together via their serial pins and send data
- * back and forth between them.
- */
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Text;
